@@ -1,8 +1,9 @@
 venv:
 	python3 -m venv .venv
-
 install:
 	. .venv/bin/activate && pip install -r requirements.txt
+
+setup: venv install
 
 clean-all: clean
 	rm -rf .venv

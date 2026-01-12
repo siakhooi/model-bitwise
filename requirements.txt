@@ -12,3 +12,4 @@ tensorflow
 tf2onnx
 onnx
 scikit-learn
+matplotlib
