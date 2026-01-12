@@ -1,2 +1,3 @@
-# tf-text-sentimental-analysis
-Text sentimental Analysis using Tensorflow
+# model-bitwise
+model for bitwise operations
+
