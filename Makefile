@@ -6,10 +6,15 @@ install:
 
 clean-all: clean
 	rm -rf .venv
+clean-model:
+	rm -rf models
 clean:
 	rm -rf data/processed target
-
-run:
+prepare:
 	mkdir -p target
 	. .venv/bin/activate && cd notebooks && papermill 01_data_preparation.ipynb ../target/01_data_preparation_output.ipynb
-	. .venv/bin/activate && cd notebooks && papermill 01_data_preparation-spark.ipynb ../target/01_data_preparation-spark_output.ipynb
+#	. .venv/bin/activate && cd notebooks && papermill 01_data_preparation-spark.ipynb ../target/01_data_preparation-spark_output.ipynb
+train:
+	. .venv/bin/activate && cd notebooks && papermill 02_model_fitting_tensorflow_keras.ipynb ../target/02_model_fitting_tensorflow_keras_output.ipynb
+
+tf-fit: clean clean-model prepare train

@@ -3,3 +3,4 @@ data/processed
 target
 *.ipynb_checkpoints
 *.pyc
+models
