@@ -1,4 +1,5 @@
 ipykernel
 pyarrow
 pandas
+pyspark
 papermill
